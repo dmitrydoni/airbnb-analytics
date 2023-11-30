@@ -17,7 +17,10 @@ WITH
         SELECT * FROM {{ ref('src_reviews') }}
     )
 
-SELECT 
+SELECT
+    {{ dbt_utils.generate_surrogate_key(
+        ['listing_id', 'review_date', 'reviewer_name', 'review_text']
+    ) }} AS review_id,
     * 
 FROM 
     src_reviews
