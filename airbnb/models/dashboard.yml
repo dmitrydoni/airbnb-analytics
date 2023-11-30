@@ -1,0 +1,17 @@
+version: 2
+
+exposures:
+  - name: Example Dashboard
+    type: dashboard
+    maturity: low
+    url: https://ea4875dd.us2a.app.preset.io/superset/dashboard/10/
+    description: Sample Dashboard
+      
+
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('full_moon_reviews')
+
+    owner:
+      name: Owner Name
+      email: owner.name@example.com
