@@ -70,4 +70,8 @@ models:
       with the 'full_moon_dates' seed table to determine if each review was
       written during a full moon, allowing analysis of the impact of full moon
       on customer reviews.
-    
+  - name: dim_listings_w_hosts
+    description: This model combines Airbnb listings and hosts data to create a
+      dimensional model, providing a consolidated view of listings with their
+      respective hosts for analysis and reporting purposes.
+    columns: []
